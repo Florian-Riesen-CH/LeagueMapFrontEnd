@@ -1,0 +1,6 @@
+<div class="menu" [style.opacity]="menuOpacity" (mouseenter)="restoreOpacity()" (mouseleave)="makeMenuTransparent()" >
+<input #searchInput (input)="onInput($event)" type="search" id="search-input" list="suggestions" placeholder="Try searching for a node..." >
+<datalist id="suggestions">
+  <option *ngFor="let suggestion of suggestions">{{ suggestion }}</option>
+</datalist>
+</div>

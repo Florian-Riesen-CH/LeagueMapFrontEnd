@@ -1,0 +1,20 @@
+{
+  "hosting": {
+    "public": "dist/web-app/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/riot.txt",
+        "destination": "/assets/riot.txt"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

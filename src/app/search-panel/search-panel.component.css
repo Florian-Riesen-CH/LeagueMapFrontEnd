@@ -1,0 +1,25 @@
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 2;
+  }
+  
+  /* Applique le style aux champs de texte, listes déroulantes et boutons */
+  .menu input[type="search"],
+  .menu input[type="text"],
+  .menu select, /* Ajouté pour inclure les éléments select */
+  .menu input[type="button"] {
+    margin: 10px 0;
+    padding: 10px;
+    width: 200px; /* Ajustez selon vos besoins */
+    /* Ajoutez ici d'autres styles si nécessaire */
+  }
+  
+  /* Style optionnel pour améliorer l'apparence de la liste déroulante */
+  .menu select {
+    cursor: pointer; /* Change le curseur pour indiquer que c'est un élément interactif */
+  }

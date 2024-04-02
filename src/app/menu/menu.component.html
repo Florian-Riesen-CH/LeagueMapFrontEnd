@@ -1,0 +1,25 @@
+<div class="menu" [style.opacity]="menuOpacity" (mouseenter)="restoreOpacity()" (mouseleave)="makeMenuTransparent()" [ngClass]="{'shake-animation': hasErrorSummoner}">
+    <input placeholder="Player Name" [(ngModel)]="summonerName" [ngStyle]="{'border-color': hasErrorSummoner ? 'red' : 'initial'}" (input)="hasErrorSummoner=false" type="text">
+    <select #searchSuggestions [(ngModel)]="historicalNb">
+      <option selected value="1">1 games</option>
+      <option value="2">2 games</option>
+      <option value="3">3 games</option>
+      <option value="4">4 games</option>
+      <option value="5">5 games</option>
+      <option value="10">10 games</option>
+      <option value="15">15 games</option>
+      <option value="20">20 games</option>
+      <option value="25">25 games</option>
+      <option value="30">30 games</option>
+      <option value="35">35 games</option>
+      <option value="40">40 games</option>
+      <option value="45">45 games</option>
+      <option value="50">50 games</option>
+      <option value="75">75 games</option>
+      <option value="100">100 games</option>
+    </select>  
+    <input type="button" (click)="triggerGetData()" value="Generate"/>
+    <br>
+  <a style="color: brown;">One first generation it could take time to power on back-end</a>
+  </div>
+  
