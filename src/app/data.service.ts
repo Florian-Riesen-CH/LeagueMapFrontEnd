@@ -9,7 +9,7 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getData(summonerName: string, historicalNb: string): Observable<any> {
-    return this.http.get('https://leaguemap.onrender.com/getDatas?sumonnerName=' + summonerName + '&nbgame=' + historicalNb).pipe(
+    return this.http.get('https://lol-map-backend-florianriesen.koyeb.app/getDatas?sumonnerName=' + summonerName + '&nbgame=' + historicalNb).pipe(
       catchError(this.handleError)
     );
   }
