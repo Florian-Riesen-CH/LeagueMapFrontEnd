@@ -48,10 +48,10 @@ export class AppComponent implements OnInit {
     this.innerHeight = window.innerHeight;
   }
 
-  getData(eventData: { summonerName: string, historicalNb: string }){
+  getData(eventData: { summonerName: string, tagName:string, historicalNb: string }){
     console.log('Request back-end')
 
-    this.dataService.getData(eventData.summonerName, eventData.historicalNb).subscribe(response => {
+    this.dataService.getData(eventData.summonerName, eventData.tagName, eventData.historicalNb).subscribe(response => {
       this.data = response;
       console.log(this.searchSuggestions)
       this.graphRender = new graphRender(this.myElement, this.searchSuggestions);

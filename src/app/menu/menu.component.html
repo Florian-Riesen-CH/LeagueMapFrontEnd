@@ -1,5 +1,6 @@
 <div class="menu" [style.opacity]="menuOpacity" (mouseenter)="restoreOpacity()" (mouseleave)="makeMenuTransparent()" [ngClass]="{'shake-animation': hasErrorSummoner}">
     <input placeholder="Player Name" [(ngModel)]="summonerName" [ngStyle]="{'border-color': hasErrorSummoner ? 'red' : 'initial'}" (input)="hasErrorSummoner=false" type="text">
+    <input placeholder="Tag Name" [(ngModel)]="tagName" [ngStyle]="{'border-color': hasErrorSummoner ? 'red' : 'initial'}" (input)="hasErrorSummoner=false" type="text">
     <select #searchSuggestions [(ngModel)]="historicalNb">
       <option selected value="1">1 games</option>
       <option value="2">2 games</option>

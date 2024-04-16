@@ -7,11 +7,12 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-  @Output() requestGetData = new EventEmitter<{ summonerName: string, historicalNb: string }>();
+  @Output() requestGetData = new EventEmitter<{ summonerName: string, tagName: string, historicalNb: string }>();
   // Définir une propriété pour contrôler l'opacité du menu
   menuOpacity: number = 1; // Opacité initiale à 100%
   
   summonerName: string = ''; // Pour stocker le nom du joueur
+  tagName: string = 'EUW'; // Pour stocker le nom du joueur
   historicalNb: string = '5'; // Pour stocker le nombre de jeux sélectionné
   hasErrorSummoner: boolean = false;
 
@@ -32,6 +33,6 @@ export class MenuComponent {
   triggerGetData(): void {
     this.hasErrorSummoner = false
 
-    this.requestGetData.emit({ summonerName: this.summonerName, historicalNb: this.historicalNb });
+    this.requestGetData.emit({ summonerName: this.summonerName, tagName: this.tagName , historicalNb: this.historicalNb});
   }
 }

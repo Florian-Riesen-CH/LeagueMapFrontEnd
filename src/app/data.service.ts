@@ -8,8 +8,8 @@ import { Observable, catchError, throwError } from 'rxjs';
 export class DataService {
   constructor(private http: HttpClient) { }
 
-  getData(summonerName: string, historicalNb: string): Observable<any> {
-    return this.http.get('https://lol-map-backend-florianriesen.koyeb.app/getDatas?sumonnerName=' + summonerName + '&nbgame=' + historicalNb).pipe(
+  getData(summonerName: string, tagName: string ,historicalNb: string): Observable<any> {
+    return this.http.get('https://lol-map-backend-florianriesen.koyeb.app/getDatas?sumonnerName=' + summonerName + '&nbgame=' + historicalNb+ '&tagename=' + tagName).pipe(
       catchError(this.handleError)
     );
   }
